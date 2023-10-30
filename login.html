@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Animated Login Form | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="center">
+      <h1>Login</h1>
+      <form method="post" onsubmit="return validateForm()" action="Home.html">
+        <div class="txt_field">
+          <input type="text" id="username" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div class="pass">Enter Password as UID</div>
+        <input type="submit" value="Login">
+        <div class="signup_link">
+          <a href="#"></a>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (password !== "123456789") {
+          alert("Incorrect password. Please enter '123456789' as the password.");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>
